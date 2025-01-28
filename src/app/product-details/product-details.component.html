@@ -1,0 +1,43 @@
+
+<!-- Product section-->
+<section class="py-5">
+    @if(product){
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6">
+                    <img class="card-img-top mb-5 mb-md-0" [src]="product.images[0]" alt="..." /></div>
+                    <!-- @for(img of product.images; track $index){
+                    <img class="card-img-top mb-5 mb-md-0" [src]="img" alt="..." />
+                     
+                    } -->
+                <div class="col-md-6">
+                    <div class="small mb-1">SKU: BST-498</div>
+                    <h5 class="display-5 fw-bolder tilte">{{product.title}}</h5>
+                    <div class="fs-5 mb-5">
+                        <span class="text-decoration-line-through me-2">${{product.price}}</span>
+
+                        <span>${{product.price|discountPipe: product.discountPercentage}}</span>
+                    </div>
+                    <p class="lead">{{product.description}}</p>
+                    <p>{{product.shippingInformation}}</p>
+                    <div class="d-flex">
+                        <input class="form-control text-center me-3" id="inputQuantity" type="num" [value]=" 'In Stock:'+ ' '+product.stock " style="max-width: 10rem" />
+                        @if(product.stock===0){
+                            <button class="btn btn-outline-dark flex-shrink-0 disabled" type="button">
+                                <i class="bi-cart-fill me-1"></i>
+                                Add to cart
+                            </button>
+                        }@else {
+                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                <i class="bi-cart-fill me-1"></i>
+                                Add to cart
+                            </button>
+                        }
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+   
+</section>

@@ -1,0 +1,21 @@
+/* img{
+    height: auto;
+    width: 200px;
+} */
+
+  .card{
+    height: 340px;
+  }
+  .card img{
+    width:auto;
+    height: 140px;
+  }
+
+  .star-rating {
+    display: inline-block;
+    font-size: 15px;
+    color: gold;
+  }
+  .title{
+    height: 40px;
+  }

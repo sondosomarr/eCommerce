@@ -1,0 +1,36 @@
+<div class="card p-2 ">
+  @if(productItem.stock <=0 ){
+   <h6><span class="badge rounded-pill bg-danger">Out Of Stock</span></h6>
+
+  }@else{
+    <h6><span class="badge rounded-pill bg-success">In Stock</span></h6>
+  }
+  <img class="card-img-top" [src]="productItem.images[0]" alt="..." />
+  <div class="card-body text-center">
+
+    <h6 class="fw-bolder title">{{ productItem.title }}</h6>
+
+    <div class="text-center d-flex justify-content-between gap-1">
+
+     <span class="price">
+      {{ productItem.price | currency : 'EGP'}}
+    </span> 
+    <span class="text-center star-rating ">
+      @for (star of [1, 2, 3, 4, 5]; track $index){
+        <i class="fa{{ $index <= productItem.rating ? 's' : 'r' }} fa-star"></i>
+        }
+    </span>
+    </div>
+    
+      <div class="text-center d-flex justify-content-between gap-1">
+        <button class="btn btn-primary mt-4">
+          Add to <i class="fa fa-shopping-cart"></i>
+        </button>
+        <button class="btn btn-primary mt-4" (click)="viewProduct(productItem.id)">View</button>
+      </div>
+      <!-- <button class="btn btn-danger mt-4 me-4" (click)="deleteHandle(productItem.id)">Delete</button> -->
+    
+  </div>
+
+  
+</div>
