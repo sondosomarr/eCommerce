@@ -4,6 +4,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { AddProductComponent } from './add-product/add-product.component';
 import { CartComponent } from './cart/cart.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
 
 export const routes: Routes = [
     {
@@ -27,6 +29,16 @@ export const routes: Routes = [
         path:'cart',
         component: CartComponent,
         'title':'Cart'
+    },
+    {
+        path:'login-page',
+        component: LoginPageComponent,
+        'title':'Login'
+    },
+    {
+        path:'register-page',
+        component: RegisterPageComponent,
+        'title':'Register'
     },
     {
         path:'**',

@@ -42,5 +42,6 @@ export interface Product  {
     minimumOrderQuantity: number,
     meta: Meta,
     images: string[],
-    thumbnail: string
+    thumbnail: string,
+    quantity?:number
   }

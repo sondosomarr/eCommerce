@@ -18,7 +18,7 @@
     >
       @for(product of products; track product.id){
       <div class="col mb-5">
-        <app-product-card [productItem]="product" (sendToParent)="deleteProduct($event)"></app-product-card>
+        <app-product-card [productItem]="product" ></app-product-card>
       </div>
       }
     </div>

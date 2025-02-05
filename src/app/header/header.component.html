@@ -38,15 +38,16 @@
             </ul>
           </li>
          
-          
-              
-         
+        </ul>
+        <ul class="navbar-nav me-2 mb-2 mb-lg-0 ms-lg-4">
+          <li class="nav-item"><a class="nav-link" routerLink="/login-page" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Login</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/register-page" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Register</a></li>
         </ul>
         
         <a routerLink="/cart" class="btn btn-outline-dark">
             <i class="fa-solid fa-cart-shopping"></i>
             Cart
-            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+            <span class="badge bg-dark text-white ms-1 rounded-pill">{{cartProducts.length}}</span>
           </a>
         
         
